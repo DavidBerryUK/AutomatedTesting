@@ -43,6 +43,7 @@ const UIShoppingListTestHarness: React.FC<IProperties> = (props) => {
       onCollectionChanged={handleCollectionChangedEvent}
       onItemChanged={handleItemChangedEvent}
       onItemDeleted={handleItemDeletedEvent}
+      testId="shopping-list"
     />
   );
 };

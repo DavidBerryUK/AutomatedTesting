@@ -11,7 +11,7 @@ describe("UIShoppingList (Render)", () => {
   //
   it("simple render", () => {
     cy.viewport(viewportSize.width, viewportSize.height);
-    cy.mount(<UIShoppingList collection={TestDataFactoryShoppingList.get()} />);
+    cy.mount(<UIShoppingList collection={TestDataFactoryShoppingList.get()} testId="shopping-list" />);
   });
 
   //
@@ -21,14 +21,14 @@ describe("UIShoppingList (Render)", () => {
   it("render  check content", () => {
     const collection = TestDataFactoryShoppingList.get();
     cy.viewport(viewportSize.width, viewportSize.height);
-    cy.mount(<UIShoppingList collection={collection} />);
+    cy.mount(<UIShoppingList collection={collection} testId="shopping-list" />);
 
     //
     // loop though rows and ensure each rows ui representation
     // matches the data model
     //
     collection.items.forEach((item: ShoppingItemModel, index: number) => {
-      cy.shoppingListLineValidate(index+1,item.name,item.quantity, item.isChecked);
+      cy.shoppingListLineValidate(index + 1, item.name, item.quantity, item.isChecked);
     });
   });
 });
