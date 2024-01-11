@@ -1,0 +1,44 @@
+[
+    {
+        "id": "4c5bed65-28f2-40c3-815f-f59e82fb8f41",
+        "name": "Apples",
+        "quantity": 6,
+        "isChecked": false,
+        "dateCreated": "2024-01-10T10:40:49.972Z"
+    },
+    {
+        "id": "7cd55f3f-6fab-4aec-a32a-93fb512fd6ed",
+        "name": "Bread",
+        "quantity": 6,
+        "isChecked": true,
+        "dateCreated": "2024-01-10T10:40:31.976Z"
+    },
+    {
+        "id": "9248108d-d402-4f02-a58a-49059df43e24",
+        "name": "Cheese",
+        "quantity": 1,
+        "isChecked": false,
+        "dateCreated": "2024-01-10T10:41:08.899Z"
+    },
+    {
+        "id": "231ee51e-ab23-4291-9673-fc3cb6d58144",
+        "name": "Milk",
+        "quantity": 2,
+        "isChecked": true,
+        "dateCreated": "2024-01-10T10:40:43.627Z"
+    },
+    {
+        "id": "77eaed84-1781-4dad-b8f5-49f142de5cc7",
+        "name": "Pasta",
+        "quantity": 1,
+        "isChecked": true,
+        "dateCreated": "2024-01-10T10:41:02.45Z"
+    },
+    {
+        "id": "fa464781-9093-49b5-9451-76b80e00ea85",
+        "name": "Steak",
+        "quantity": 2,
+        "isChecked": false,
+        "dateCreated": "2024-01-10T10:40:57.029Z"
+    }
+]

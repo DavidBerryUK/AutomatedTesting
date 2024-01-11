@@ -1,0 +1,23 @@
+// VARIABLES AND BODY
+@import "./sections/variables.scss";
+@import "./sections/body.scss";
+
+// UI ELEMENTS
+@import "../ui/uiBox/styles/Styles.scss";
+@import "../ui/uiButton/styles/Styles.scss";
+@import "../ui/uiButtonStep/styles/Styles.scss";
+@import "../ui/uiLabel/styles/Styles.scss";
+@import "../ui/uiSegment/styles/Styles.scss";
+@import "../ui/uiSpacer/styles/Styles.scss";
+@import "../ui/uiStepper/styles/Styles.scss";
+@import "../ui/uiSwitch/styles/Styles.scss";
+@import "../ui/uiTextNumber/styles/Styles.scss";
+@import "../ui/uiTextString/styles/Styles.scss";
+
+// WIDGETS
+@import "../uiWidget/uiShoppingItem/styles/Styles.scss";
+@import "../uiWidget/uiShoppingList/styles/Styles.scss";
+
+// GENERIC
+@import "./sections/padding.scss";
+@import "./sections/margin.scss";

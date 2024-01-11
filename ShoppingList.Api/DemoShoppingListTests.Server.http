@@ -1,0 +1,7 @@
+@DemoShoppingListTests.Server_HostAddress = http://localhost:5255
+
+GET {{DemoShoppingListTests.Server_HostAddress}}/ListItem/
+Accept: application/json
+
+###
+        

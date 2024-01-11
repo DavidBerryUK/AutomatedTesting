@@ -1,0 +1,7 @@
+@import "../../../styles/sections/variables.scss";
+
+.ui-shopping-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}

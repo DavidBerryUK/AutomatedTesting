@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+@for $i from 1 through 5 {
+  .p#{$i} {
+    padding: nth($margin-padding-spacing, $i);
+  }
+
+  .pl#{$i} {
+    padding-left: nth($margin-padding-spacing, $i);
+  }
+
+  .pr#{$i} {
+    padding-right: nth($margin-padding-spacing, $i);
+  }
+
+  .pt#{$i} {
+    padding-top: nth($margin-padding-spacing, $i);
+  }
+
+  .pb#{$i} {
+    padding-bottom: nth($margin-padding-spacing, $i);
+  }
+}

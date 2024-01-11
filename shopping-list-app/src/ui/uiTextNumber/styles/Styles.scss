@@ -1,0 +1,20 @@
+@import "../../../styles/sections/variables.scss";
+
+.ui-text-number {
+  border: solid $control-border-width $control-border-color;
+  color: $control-text-color-light;
+  background-color: $button-background-color;
+  height: $control-height;
+  width: $control-height;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+
+  &:hover {
+    border: solid $control-border-width $button-border-hover-color;
+    background-color: $button-background-hover-color;
+  }
+}

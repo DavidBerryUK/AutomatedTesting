@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+@for $i from 1 through 5 {
+  .m#{$i} {
+    margin: nth($margin-padding-spacing, $i);
+  }
+
+  .ml#{$i} {
+    margin-left: nth($margin-padding-spacing, $i);
+  }
+
+  .mr#{$i} {
+    margin-right: nth($margin-padding-spacing, $i);
+  }
+
+  .mt#{$i} {
+    margin-top: nth($margin-padding-spacing, $i);
+  }
+
+  .mb#{$i} {
+    margin-bottom: nth($margin-padding-spacing, $i);
+  }
+}

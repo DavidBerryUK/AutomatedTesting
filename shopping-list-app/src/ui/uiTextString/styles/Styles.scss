@@ -1,0 +1,21 @@
+@import "../../../styles/sections/variables.scss";
+
+.ui-text-string {
+  border: solid $control-text-border-width $control-border-color;
+  border-radius: $control-border-radius;
+  height: $control-height;
+  background-color: $control-text-background-color;
+  color: $control-text-color-dark;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: bolder;
+  padding-left: 6px;
+  padding-right: 6px;
+
+  &:hover {
+    border: solid $control-text-border-width $button-border-hover-color;
+    background-color: $control-text-background-color-hover;
+  }
+}

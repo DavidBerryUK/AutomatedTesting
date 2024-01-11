@@ -1,0 +1,36 @@
+@import "../../../styles/sections/variables.scss";
+
+.ui-button-step {
+  cursor: pointer;
+  border: solid $control-border-width $control-border-color;
+  color: $control-text-color-light;
+  background-color: $button-background-color;
+  height: $control-height;
+  width: $control-height;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  font-size: $control-text-size-ex-large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $control-border-radius;
+
+  &.leading-rounded {
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  &.trailing-rounded {
+    border-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  &:hover {
+    border: solid $control-border-width $button-border-hover-color;
+    background-color: $button-background-hover-color;
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../../styles/sections/variables.scss";
+
+/*
+* unique styles for the button control
+*/
+.ui-button {
+  cursor: pointer;
+  border: solid $control-border-width $control-border-color;
+  background-color: $button-background-color;
+  height: $control-height;
+  color: $control-text-color-light;
+  font-size: $control-text-size-normal;
+  border-radius: $control-border-radius;
+
+  //
+  // button size (height & text)
+  //
+  &.btn-small {
+    font-size: $control-text-size-small;
+    height: $control-height-small;
+  }
+
+  &.btn-large {
+    font-size: $control-text-size-large;
+    height: $control-height-large;
+  }
+
+  &.btn-ex-large {
+    font-size: $control-text-size-ex-large;
+    height: $control-height-ex-large;
+  }
+  //
+  // button width
+  //
+  &.btn-width-standard {
+    width: $control-width-standard;
+  }
+
+  &.btn-width-wide {
+    width: $control-width-wide;
+  }
+
+  &.btn-width-ex-wide {
+    width: $control-width-ex-wide;
+  }
+  //
+  // text weight
+  //
+  &.btn-btn-bold {
+    font-weight: bold;
+  }
+
+  //
+  // Font Sizes
+  //
+  &.btn-txt-small {
+    font-size: $control-text-size-small;
+  }
+
+  &.btn-txt-large {
+    font-size: $control-text-size-large;
+  }
+
+  &.btn-txt-ex-large {
+    font-size: $control-text-size-ex-large;
+  }
+
+  &:hover {
+    border: solid $control-border-width $button-border-hover-color;
+    background-color: $button-background-hover-color;
+  }
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    border: solid $control-border-width $control-border-color;
+    background-color: $button-background-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: solid $control-border-width $control-border-color-disabled;
+    background-color: $button-background-color-disabled;
+    color: $control-text-color-light-disabled;
+  }
+}

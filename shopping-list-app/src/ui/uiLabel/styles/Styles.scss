@@ -1,0 +1,42 @@
+@import "../../../styles/sections/variables.scss";
+
+.ui-label {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  font-size: $control-text-size-normal;
+  color: $label-color;
+
+  .lbl-text {
+    margin-right: 8px;
+  }
+
+  &.lbl-ex-small {
+    .lbl-text {
+      width: $control-label-width-ex-small;
+    }
+  }
+
+  &.lbl-small {
+    .lbl-text {
+      width: $control-label-width-small;
+    }
+  }
+
+  &.lbl-medium {
+    .lbl-text {
+      width: $control-label-width-medium;
+    }
+  }
+
+  &.lbl-wide {
+    .lbl-text {
+      width: $control-label-width-wide;
+    }
+  }
+
+  &.lbl-ex-wide {
+    .lbl-text {
+      width: $control-label-width-ex-wide;
+    }
+  }
+}

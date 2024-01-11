@@ -1,0 +1,65 @@
+// layout
+$margin-padding-spacing: (4px, 8px, 16px, 32px, 64px);
+
+//
+$disable-lighten-percentage: 20;
+
+// background
+$base-background-color: #dddddd;
+$base-text-color: #000000;
+
+// controls
+$control-border-radius: 6px;
+$control-base-color: #57c2f4;
+$control-text-color-light: #ffffff;
+$control-text-color-light-disabled: lighten($control-text-color-light, $disable-lighten-percentage);
+$control-text-color-dark: darken($control-base-color, 35);
+$control-border-width: 1px;
+$control-border-color: darken($control-base-color, 5);
+$control-border-color-disabled: lighten($control-border-color, $disable-lighten-percentage);
+$control-height: 40px;
+
+// standard control heights
+$control-height-small: 30px;
+$control-height-large: 50px;
+$control-height-ex-large: 64px;
+
+// standard control widths
+$control-width-standard: 100px;
+$control-width-wide: 210px;
+$control-width-ex-wide: 400px;
+
+// text
+$control-text-background-color: #ffffff;
+$control-text-background-color-hover: lighten($control-base-color, 30);
+$control-text-border-width: 2px;
+
+// label color
+$label-color: #888;
+
+// text-size
+$control-text-size-small: 10px;
+$control-text-size-normal: 16px;
+$control-text-size-large: 20px;
+$control-text-size-ex-large: 28px;
+
+// button
+$button-background-color: $control-base-color;
+$button-background-color-disabled: lighten($button-background-color, $disable-lighten-percentage);
+$button-text-color: #fff;
+
+// hover
+$button-border-hover-color: lighten($control-border-color, 10);
+$button-background-hover-color: lighten($control-base-color, 5);
+
+// switch
+$control-switch-off-background-color: #434257;
+$control-switch-on-background-color: #00d084;
+$control-switch-on-button-color: #ffffff;
+
+// label
+$control-label-width-ex-small: 40px;
+$control-label-width-small: 70px;
+$control-label-width-medium: 100px;
+$control-label-width-wide: 150px;
+$control-label-width-ex-wide: 200px;
