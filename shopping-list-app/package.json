@@ -12,7 +12,7 @@
     "cypress:batch:component": "cross-env REACT_APP_USE_MOCK_REPOS='true' && cypress run --component",
     "storybook": "npm run sass && storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "storybook:deploy": "storybook-to-ghpages",
+    "storybook:deploy": "storybook-to-ghpages --out=storybook-published --source-branch=main",
     "sass": "sass ./src/styles/styles.scss ./public/main.css",
     "sass-watch": "sass --watch ./src/styles/styles.scss ./public/main.css"
   },

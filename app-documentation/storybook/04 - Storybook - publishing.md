@@ -15,3 +15,13 @@ Amend package.json to add a new script to deploy the storybook
         "storybook:deploy": "storybook-to-ghpages",
   },
 ```
+
+```
+npm run storybook:deploy
+```
+
+page is now published to following
+
+```
+https://DavidBerryUK.github.io/AutomatedTesting/
+```
