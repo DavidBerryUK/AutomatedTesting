@@ -6,27 +6,30 @@ open a shell and goto the directory of the package.json file, then install cypre
 npm install cypress --save-dev
 ```
 
-# Package.json - Create Shell Entry
+# Package.json - Create Shell Entries
 
 ```json
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "test-storybook": "test-storybook",
-    "build-storybook": "storybook build",
-    "cypress": "npx cypress open"
+    "cypress": "cross-env REACT_APP_USE_MOCK_REPOS='true' && cypress open",
+    "cypress:e2e": "concurrently \"npm run start\" \"cypress open\"",
+    "cypress:batch:component": "cross-env REACT_APP_USE_MOCK_REPOS='true' && cypress run --component",
   },
 ```
 
 # Running Cypress
 
-Run cypress via the following command
+Run cypress via the following commands
 
 ```
 npm run cypress
+```
+
+```
+npm run cypress:e2e
+```
+
+```
+npm run cypress:e2e
 ```
 
 The first time cypress is run within a project, it will not be configured and you will see the following screen
