@@ -1,9 +1,7 @@
 import { ReactNode } from "react";
 import IStyleMargin from "src/styles/interfaces/iStyleMargin";
 import IStylePadding from "src/styles/interfaces/IStylePadding";
-import useStyleSolverMargin from "src/styles/hooks/styleSolverMargin/useStyleSolverMargin";
-import useClassMerge from "src/styles/hooks/classMerge/useClassMerge";
-import useStyleSolverPadding from "src/styles/hooks/styleSolverPadding/useStyleSolverPadding";
+import useControlStyleSolver from "./hooks/UseControlStyleSolver";
 
 /**
  * Control properties
@@ -25,9 +23,7 @@ const UIBox: React.FC<IProperties> = (props) => {
   /********************************************/
   /* Create Styles
   /********************************************/
-  const paddingClass = useStyleSolverPadding(props);
-  const marginClass = useStyleSolverMargin(props);
-  const className = useClassMerge(["ui-box", paddingClass, marginClass]);
+  const className = useControlStyleSolver(props);
 
   /********************************************/
   /* Template                                 */

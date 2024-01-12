@@ -17,7 +17,7 @@ const UITextNumberTestHarness: React.FC<IProperties> = (props) => {
 
   const handleValueChangeEvent = (value: number) => {
     setValueState(value);
-    props.onValueChange(value);
+    props.onValueChanged(value);
   };
 
   return <UITextNumber value={valueState} testId={props.testId} onValueChange={handleValueChangeEvent} />;

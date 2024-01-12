@@ -3,5 +3,8 @@ export default function useClassMerge(classes: Array<string | undefined>): strin
     return "";
   }
 
-  return classes.filter((item) => item !== undefined && item !== null && item.length !== 0).join(" ");
+  return classes
+    .filter((item) => item !== undefined && item !== null && item.length !== 0)
+    .join(" ")
+    .trim();
 }

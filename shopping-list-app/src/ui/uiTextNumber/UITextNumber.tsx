@@ -26,7 +26,7 @@ const UITextNumber: React.FC<IProperties> = (props) => {
       if (isNaN(value)) {
         return;
       }
-      props.onValueChange(value);
+      props.onValueChanged(value);
     }
   };
 

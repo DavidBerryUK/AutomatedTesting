@@ -17,7 +17,7 @@ import useStyleSolverWidth from "src/styles/hooks/styleSolverWidth/useStyleSolve
  * @param style - style options - see individual options and solvers
  * @returns
  */
-const useButtonStyle = (style: IStyleTextSize & IStyleSize & IStyleWidth & IStyleBold & IStyleMargin & IStylePadding): string => {
+const useControlStyleSolver = (style: IStyleTextSize & IStyleSize & IStyleWidth & IStyleBold & IStyleMargin & IStylePadding): string => {
   const classSize = useStyleSolverSive("btn-", style);
   const classWidth = useStyleSolverWidth("btn-", style);
   const classBold = useStyleSolverBold("btn-", style);
@@ -28,4 +28,4 @@ const useButtonStyle = (style: IStyleTextSize & IStyleSize & IStyleWidth & IStyl
   return className;
 };
 
-export default useButtonStyle;
+export default useControlStyleSolver;

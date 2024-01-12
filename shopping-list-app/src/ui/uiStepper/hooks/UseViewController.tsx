@@ -14,7 +14,7 @@ const useViewController = (
   // Current value of the counter
   value: number,
   // call back to execute when the value changes
-  onValueChange?: (value: number) => void
+  onValueChanged?: (value: number) => void
 ) => {
   /********************************************/
   /* Event Handlers                           *
@@ -22,23 +22,23 @@ const useViewController = (
 
   // decrement button
   const handleOnButtonSubtractEvent = () => {
-    if (onValueChange && value > 0) {
-      onValueChange(value - 1);
+    if (onValueChanged && value > 0) {
+      onValueChanged(value - 1);
     }
   };
 
   // increment button handler
   const handleOnButtonIncrementEvent = () => {
-    if (onValueChange) {
-      onValueChange(value + 1);
+    if (onValueChanged) {
+      onValueChanged(value + 1);
     }
   };
 
   // text editor handler
   const handleOnValueChanged = (newValue: number) => {
-    if (onValueChange) {
+    if (onValueChanged) {
       if (newValue >= 0) {
-        onValueChange(newValue);
+        onValueChanged(newValue);
       }
     }
   };

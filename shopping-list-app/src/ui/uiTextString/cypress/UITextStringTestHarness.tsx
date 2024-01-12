@@ -16,7 +16,7 @@ const UITextStringTestHarness: React.FC<IProperties> = (props) => {
 
   const handleValueChangeEvent = (value: string) => {
     setValueState(value);
-    props.onValueChange(value);
+    props.onValueChanged(value);
   };
 
   return <UITextString value={valueState} testId={props.testId} onValueChange={handleValueChangeEvent} />;

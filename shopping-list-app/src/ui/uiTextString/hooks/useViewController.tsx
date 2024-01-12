@@ -8,7 +8,7 @@ const useViewController = (
   const handleOnValueChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (onValueChange) {
       const value = event.target.value;
-      onValueChange(value);
+      onValueChanged(value);
     }
   };
 

@@ -1,3 +1,4 @@
+import useViewController from "./hooks/UseViewController";
 import SegmentOption from "./models/SegmentOption";
 import UISegmentOption from "./support/UISegmentOption";
 
@@ -12,11 +13,7 @@ const UISegment: React.FC<IProperties> = (props) => {
   /********************************************/
   /* View Controller
   /********************************************/
-  const handleSegmentClickedEvent = (option: SegmentOption) => {
-    if (props.onChange) {
-      props.onChange(option);
-    }
-  };
+  const { handleValueChangedEvent } = useViewController(props.onChange);
 
   /********************************************/
   /* Template                                 */
@@ -24,7 +21,7 @@ const UISegment: React.FC<IProperties> = (props) => {
   return (
     <div className="ui-segment">
       {props.options.map((option) => (
-        <UISegmentOption key={option.code} option={option} selected={option.code === props.value} onClick={handleSegmentClickedEvent} />
+        <UISegmentOption key={option.code} option={option} selected={option.code === props.value} onClick={handleValueChangedEvent} />
       ))}
     </div>
   );

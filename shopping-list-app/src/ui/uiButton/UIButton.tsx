@@ -3,7 +3,7 @@ import IStyleTextSize from "src/styles/interfaces/IStyleTextSize";
 import IStyleWidth from "src/styles/interfaces/IStyleWidth";
 import useViewController from "./hooks/UseViewController";
 import IStyleBold from "src/styles/interfaces/IStyleBold";
-import useButtonStyle from "./hooks/UseButtonStyle";
+import useControlStyleSolver from "./hooks/UseControlStyleSolver";
 import IStyleMargin from "src/styles/interfaces/iStyleMargin";
 import IStylePadding from "src/styles/interfaces/IStylePadding";
 
@@ -39,7 +39,7 @@ const UIButton: React.FC<IProperties> = (props) => {
   /********************************************/
   /* Create Styles
   /********************************************/
-  const className = useButtonStyle(props);
+  const className = useControlStyleSolver(props);
 
   /********************************************/
   /* View Controller

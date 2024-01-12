@@ -12,10 +12,6 @@ const useStyleSolverLabelWidth = (prefix: string, style: IStyleLabelWidth): stri
     return `${prefix}lbl-small`;
   }
 
-  if (style.small) {
-    return `${prefix}lbl-small`;
-  }
-
   if (style.medium) {
     return `${prefix}lbl-medium`;
   }

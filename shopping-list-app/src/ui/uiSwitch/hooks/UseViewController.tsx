@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
 
-const useViewController = (onValueChange?: (value: boolean) => void) => {
+const useViewController = (onValueChanged?: (value: boolean) => void) => {
   // create unique value for control, this
   // is used to link the INPUT and LABEL control together
   const [controlId] = useState(nanoid());
@@ -10,9 +10,9 @@ const useViewController = (onValueChange?: (value: boolean) => void) => {
   /* Event Handlers                           *
   /********************************************/
   const handleOnValueChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onValueChange) {
+    if (onValueChanged) {
       const value = event.target.checked;
-      onValueChange(value);
+      onValueChanged(value);
     }
   };
 

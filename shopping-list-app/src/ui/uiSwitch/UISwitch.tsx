@@ -1,4 +1,4 @@
-import useViewController from "./hooks/UseViewHandler";
+import useViewController from "./hooks/UseViewController";
 
 interface IProperties {
   value: boolean;
