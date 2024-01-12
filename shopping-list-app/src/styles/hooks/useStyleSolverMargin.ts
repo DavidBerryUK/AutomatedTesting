@@ -12,7 +12,7 @@ const useStyleSolverMargin = (style: IStyleMargin): string => {
     }
   }
 
-  return className;
+  return className.trim();
 };
 
 export default useStyleSolverMargin;

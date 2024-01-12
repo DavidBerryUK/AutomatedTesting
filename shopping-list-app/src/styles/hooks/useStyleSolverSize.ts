@@ -4,7 +4,7 @@
 import IStyleSize from "src/styles/interfaces/IStyleSize";
 
 //
-const useStyleSolverSive = (prefix: string, style: IStyleSize): string => {
+const useStyleSolverSize = (prefix: string, style: IStyleSize): string => {
   if (style.small) {
     return `${prefix}small`;
   }
@@ -20,4 +20,4 @@ const useStyleSolverSive = (prefix: string, style: IStyleSize): string => {
   return ``;
 };
 
-export default useStyleSolverSive;
+export default useStyleSolverSize;

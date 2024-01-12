@@ -1,6 +1,6 @@
-import useClassMerge from "src/styles/hooks/classMerge/useClassMerge";
-import useStyleSolverMargin from "src/styles/hooks/styleSolverMargin/useStyleSolverMargin";
-import useStyleSolverPadding from "src/styles/hooks/styleSolverPadding/useStyleSolverPadding";
+import useClassMerge from "src/styles/hooks/useClassMerge";
+import useStyleSolverMargin from "src/styles/hooks/useStyleSolverMargin";
+import useStyleSolverPadding from "src/styles/hooks/useStyleSolverPadding";
 import IStylePadding from "src/styles/interfaces/IStylePadding";
 import IStyleMargin from "src/styles/interfaces/iStyleMargin";
 

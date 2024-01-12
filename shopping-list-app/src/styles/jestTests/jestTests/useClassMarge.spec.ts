@@ -1,4 +1,4 @@
-import useClassMerge from "../useClassMerge";
+import useClassMerge from "../../hooks/useClassMerge";
 
 describe("use Class Merge Test", () => {
   test("null", () => {

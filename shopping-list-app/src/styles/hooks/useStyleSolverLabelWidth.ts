@@ -4,6 +4,9 @@ import IStyleLabelWidth from "src/styles/interfaces/IStyleLabelWidth";
 
 //
 const useStyleSolverLabelWidth = (prefix: string, style: IStyleLabelWidth): string => {
+  if (prefix.length > 0) {
+    prefix = `${prefix.trim()} `;
+  }
   if (style.extraSmall) {
     return `${prefix}lbl-ex-small`;
   }

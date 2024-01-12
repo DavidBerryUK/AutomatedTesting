@@ -1,3 +1,5 @@
+import useViewController from "./hooks/UseViewController";
+
 interface IProperties {
   /**
    * Current value of the number
@@ -10,7 +12,7 @@ interface IProperties {
   /**
    * Optional value change event
    */
-  onValueChange?: (value: number) => void;
+  onValueChanged?: (value: number) => void;
 }
 
 /**
@@ -18,22 +20,14 @@ interface IProperties {
  */
 const UITextNumber: React.FC<IProperties> = (props) => {
   /********************************************/
-  /* Event Handlers                           *
+  /* View Controller
   /********************************************/
-  const handleOnValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (props.onValueChange) {
-      const value = Number(event.target.value);
-      if (isNaN(value)) {
-        return;
-      }
-      props.onValueChanged(value);
-    }
-  };
+  const { handleOnValueChanged } = useViewController(props.onValueChanged);
 
   /********************************************/
   /* Template                                 */
   /********************************************/
-  return <input className="ui-text-number" value={props.value} data-testid={props.testId} onChange={handleOnValueChange} />;
+  return <input className="ui-text-number" value={props.value} data-testid={props.testId} onChange={handleOnValueChanged} />;
 };
 
 export default UITextNumber;

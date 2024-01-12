@@ -1,6 +1,6 @@
-import useClassMerge from "src/styles/hooks/classMerge/useClassMerge";
+import useClassMerge from "src/styles/hooks/useClassMerge";
 import IStyleLabelWidth from "src/styles/interfaces/IStyleLabelWidth";
-import useStyleSolverLabelWidth from "src/styles/hooks/styleSolverLabelWidth/useStyleSolverLabelWidth";
+import useStyleSolverLabelWidth from "src/styles/hooks/useStyleSolverLabelWidth";
 
 /**
  * Create style for label dependant upon the style options provided

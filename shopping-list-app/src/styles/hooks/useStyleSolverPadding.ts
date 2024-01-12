@@ -12,7 +12,7 @@ const useStyleSolverPadding = (style: IStylePadding): string => {
     }
   }
 
-  return className;
+  return className.trim();
 };
 
 export default useStyleSolverPadding;

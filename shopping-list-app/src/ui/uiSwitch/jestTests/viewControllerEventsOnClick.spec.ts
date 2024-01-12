@@ -1,21 +1,12 @@
 import useViewController from "../hooks/UseViewController";
-import { nanoid } from "nanoid";
-import { mocked } from "jest-mock";
-
-afterAll(() => {
-  jest.resetAllMocks();
-});
 
 // test the when the switch controll is pressed (toggled)
 //
 describe("UISwitch Events", () => {
-  test("that on click is raised", () => {
+  test("that on click is raised toggled to on", () => {
     //
     // Arrange
     //
-    jest.mock("nanoid");
-    const mnanoid = mocked(nanoid);
-    mnanoid.mockReturnValue("control-1234");
 
     // the callback function should be raised when the button is clicked
     const onButtonClicked = jest.fn(); // Mock the callback function
@@ -37,5 +28,32 @@ describe("UISwitch Events", () => {
     // Assert
     //
     expect(onButtonClicked).toHaveBeenCalledWith(true);
+  });
+
+  test("that on click is raised toggled to off", () => {
+    //
+    // Arrange
+    //
+
+    // the callback function should be raised when the button is clicked
+    const onButtonClicked = jest.fn(); // Mock the callback function
+    const { handleOnValueChanged } = useViewController(onButtonClicked);
+
+    //
+    // Act
+    //
+    // simulate the ui control's click event being called
+    // Mock the event object with target.checked set to true
+    const mockChangeEvent = {
+      target: {
+        checked: false,
+      },
+    } as any;
+    handleOnValueChanged(mockChangeEvent);
+
+    //
+    // Assert
+    //
+    expect(onButtonClicked).toHaveBeenCalledWith(false);
   });
 });
