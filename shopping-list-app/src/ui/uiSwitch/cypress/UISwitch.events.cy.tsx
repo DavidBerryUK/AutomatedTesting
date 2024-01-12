@@ -11,7 +11,7 @@ describe("UISwitch (Events)", () => {
       <UISwitch
         value={isOn}
         testId="switch"
-        onValueChange={(newValue: boolean) => {
+        onValueChanged={(newValue: boolean) => {
           isOn = newValue;
         }}
       />
@@ -34,7 +34,7 @@ describe("UISwitch (Events)", () => {
       <UISwitch
         value={isOn}
         testId="switch"
-        onValueChange={(newValue: boolean) => {
+        onValueChanged={(newValue: boolean) => {
           isOn = newValue;
         }}
       />

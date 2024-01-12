@@ -18,7 +18,7 @@ interface IProperties {
   buttonAddTestId?: string;
   buttonSubtractTestId?: string;
   txtValueTestId?: string;
-  onValueChange?: (value: number) => void;
+  onValueChanged?: (value: number) => void;
 }
 
 /**
@@ -36,7 +36,7 @@ const UIStepper: React.FC<IProperties> = (props) => {
   /********************************************/
   const { handleOnValueChanged, handleOnButtonIncrementEvent, handleOnButtonSubtractEvent } = useViewController(
     props.value,
-    props.onValueChange
+    props.onValueChanged
   );
 
   /********************************************/
@@ -45,7 +45,7 @@ const UIStepper: React.FC<IProperties> = (props) => {
   return (
     <div className="ui-stepper" data-testid={props.testId}>
       <UIButtonStep leadingRounded label="-" onClick={handleOnButtonSubtractEvent} testId={props.buttonSubtractTestId} />
-      <UITextNumber value={props.value} onValueChange={handleOnValueChanged} testId={props.txtValueTestId} />
+      <UITextNumber value={props.value} onValueChanged={handleOnValueChanged} testId={props.txtValueTestId} />
       <UIButtonStep trailingRounded label="+" onClick={handleOnButtonIncrementEvent} testId={props.buttonAddTestId} />
     </div>
   );

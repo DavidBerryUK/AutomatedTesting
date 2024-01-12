@@ -4,7 +4,7 @@ import UITextString from "../UITextString";
 interface IProperties {
   value: string;
   testId?: string;
-  onValueChange: (value: string) => void;
+  onValueChanged: (value: string) => void;
 }
 
 /*
@@ -19,7 +19,7 @@ const UITextStringTestHarness: React.FC<IProperties> = (props) => {
     props.onValueChanged(value);
   };
 
-  return <UITextString value={valueState} testId={props.testId} onValueChange={handleValueChangeEvent} />;
+  return <UITextString value={valueState} testId={props.testId} onValueChanged={handleValueChangeEvent} />;
 };
 
 export default UITextStringTestHarness;

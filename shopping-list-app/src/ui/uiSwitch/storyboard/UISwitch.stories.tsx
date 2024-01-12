@@ -43,7 +43,7 @@ export const InteractiveExample: React.FC = () => {
   return (
     <UISwitch
       value={value}
-      onValueChange={(newValue) => {
+      onValueChanged={(newValue) => {
         setValue(newValue);
       }}
     />

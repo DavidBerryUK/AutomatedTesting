@@ -5,7 +5,7 @@ import "../../../styles/styles.scss";
 interface IProperties {
   value: number;
   testId?: string;
-  onValueChange: (value: number) => void;
+  onValueChanged: (value: number) => void;
 }
 
 /**
@@ -20,7 +20,7 @@ const UITextNumberTestHarness: React.FC<IProperties> = (props) => {
     props.onValueChanged(value);
   };
 
-  return <UITextNumber value={valueState} testId={props.testId} onValueChange={handleValueChangeEvent} />;
+  return <UITextNumber value={valueState} testId={props.testId} onValueChanged={handleValueChangeEvent} />;
 };
 
 export default UITextNumberTestHarness;

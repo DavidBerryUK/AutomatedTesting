@@ -8,7 +8,7 @@ describe("UITextString (Events)", () => {
       <UITextStringTestHarness
         value={value}
         testId="test-value-text"
-        onValueChange={(newValue: string) => {
+        onValueChanged={(newValue: string) => {
           value = newValue;
         }}
       />
@@ -35,7 +35,7 @@ describe("UITextString (Events)", () => {
       <UITextStringTestHarness
         value={value}
         testId="test-value-text"
-        onValueChange={(newValue: string) => {
+        onValueChanged={(newValue: string) => {
           value = newValue;
         }}
       />

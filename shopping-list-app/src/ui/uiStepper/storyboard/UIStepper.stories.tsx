@@ -17,7 +17,7 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     value: { control: { type: "number", min: 0, max: 30, step: 1 } },
-    onValueChange: { action: "value changed" },
+    onValueChanged: { action: "value changed" },
   },
 } satisfies Meta<typeof UIStepper>;
 
@@ -36,7 +36,7 @@ export const InteractiveExample: React.FC = () => {
   return (
     <UIStepper
       value={value}
-      onValueChange={(newValue) => {
+      onValueChanged={(newValue) => {
         setValue(newValue);
       }}
     />
@@ -47,13 +47,13 @@ export const TestSubtractButton: Story = {
   args: {
     buttonSubtractTestId: "stepper-button-subtract",
     value: 10,
-    onValueChange: jest.fn(),
+    onValueChanged: jest.fn(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const refButton = canvas.getByTestId("stepper-button-subtract");
     await userEvent.click(refButton);
-    await expect(TestSubtractButton.args.onValueChange).toHaveBeenCalledWith(9);
+    await expect(TestSubtractButton.args.onValueChanged).toHaveBeenCalledWith(9);
   },
 };
 
@@ -61,14 +61,14 @@ export const TestSubtractMinZero: Story = {
   args: {
     buttonSubtractTestId: "stepper-button-subtract",
     value: 0,
-    onValueChange: jest.fn(),
+    onValueChanged: jest.fn(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const refButton = canvas.getByTestId("stepper-button-subtract");
     await userEvent.click(refButton);
     // should not be called when value is zero
-    await expect(TestSubtractMinZero.args.onValueChange).toHaveBeenCalledTimes(0);
+    await expect(TestSubtractMinZero.args.onValueChanged).toHaveBeenCalledTimes(0);
   },
 };
 
@@ -76,13 +76,13 @@ export const TestAddButton: Story = {
   args: {
     buttonAddTestId: "stepper-button-add",
     value: 10,
-    onValueChange: jest.fn(),
+    onValueChanged: jest.fn(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const refButton = canvas.getByTestId("stepper-button-add");
     await userEvent.click(refButton);
-    await expect(TestAddButton.args.onValueChange).toHaveBeenCalledWith(11);
+    await expect(TestAddButton.args.onValueChanged).toHaveBeenCalledWith(11);
   },
 };
 
@@ -90,7 +90,7 @@ export const TestTypeNewValue: Story = {
   args: {
     txtValueTestId: "text-number-demo",
     value: 10,
-    onValueChange: jest.fn(),
+    onValueChanged: jest.fn(),
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -99,6 +99,6 @@ export const TestTypeNewValue: Story = {
       initialSelectionStart: 0,
       initialSelectionEnd: 1000,
     });
-    await expect(TestTypeNewValue.args.onValueChange).toHaveBeenCalledWith(5);
+    await expect(TestTypeNewValue.args.onValueChanged).toHaveBeenCalledWith(5);
   },
 };

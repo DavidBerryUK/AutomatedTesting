@@ -12,14 +12,14 @@ interface IProperties {
   /**
    * Optional value change event
    */
-  onValueChange?: (value: string) => void;
+  onValueChanged?: (value: string) => void;
 }
 
 const UITextString: React.FC<IProperties> = (props) => {
   /********************************************/
   /* Event Handlers                           *
   /********************************************/
-  const { handleOnValueChanged } = useViewController(props.onValueChange);
+  const { handleOnValueChanged } = useViewController(props.onValueChanged);
 
   /********************************************/
   /* Template                                 */

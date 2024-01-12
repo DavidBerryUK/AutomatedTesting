@@ -65,10 +65,10 @@ const UIShoppingItem: React.FC<IProperties> = (props) => {
   /********************************************/
   return (
     <div className="ui-shopping-item" data-testid={props.testId}>
-      <UITextString value={props.value.name} onValueChange={handleNameUpdatedEvent} testId={props.textTestId} />
-      <UIStepper value={props.value.quantity} onValueChange={handleQuantityUpdatedEvent} testId={props.stepperTestId} />
+      <UITextString value={props.value.name} onValueChanged={handleNameUpdatedEvent} testId={props.textTestId} />
+      <UIStepper value={props.value.quantity} onValueChanged={handleQuantityUpdatedEvent} testId={props.stepperTestId} />
       <UIShowIf value={props.showSwitchComplete}>
-        <UISwitch value={props.value.isChecked} onValueChange={handleIsCheckedUpdateEvent} testId={props.switchTestId} />
+        <UISwitch value={props.value.isChecked} onValueChanged={handleIsCheckedUpdateEvent} testId={props.switchTestId} />
       </UIShowIf>
       <UISpacer />
       <UIShowIf value={props.showButtonAdd}>

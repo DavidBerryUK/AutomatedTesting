@@ -8,8 +8,9 @@ import useClassMerge from "src/styles/hooks/useClassMerge";
 import useStyleSolverBold from "src/styles/hooks/useStyleSolverBold";
 import useStyleSolverMargin from "src/styles/hooks/useStyleSolverMargin";
 import useStyleSolverPadding from "src/styles/hooks/useStyleSolverPadding";
-import useStyleSolverSize from "src/styles/hooks/useStyleSolverTextSize";
+import useStyleSolverSize from "src/styles/hooks/useStyleSolverSize";
 import useStyleSolverWidth from "src/styles/hooks/useStyleSolverWidth";
+import useStyleSolverTextSize from "src/styles/hooks/useStyleSolverTextSize";
 
 /**
  * Create style for button dependant upon the style options provided
@@ -20,8 +21,9 @@ const useControlStyleSolver = (style: IStyleTextSize & IStyleSize & IStyleWidth 
   const classSize = useStyleSolverSize("btn-", style);
   const classWidth = useStyleSolverWidth("btn-", style);
   const classBold = useStyleSolverBold("btn-", style);
-  const classText = useStyleSolverSize("btn-", style);
+  const classText = useStyleSolverTextSize("btn-", style);
   const classPadding = useStyleSolverPadding(style);
+
   const classMargin = useStyleSolverMargin(style);
   const className = useClassMerge(["ui-button", classSize, classBold, classWidth, classText, classPadding, classMargin]);
   return className;

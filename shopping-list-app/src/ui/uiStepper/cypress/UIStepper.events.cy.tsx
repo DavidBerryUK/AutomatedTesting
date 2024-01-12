@@ -12,7 +12,7 @@ describe("UIStepper (Events)", () => {
         buttonSubtractTestId="test-subtract-button"
         buttonAddTestId="test-add-button"
         txtValueTestId="test-value-text"
-        onValueChange={(newValue: number) => {
+        onValueChanged={(newValue: number) => {
           value = newValue;
         }}
       />
@@ -38,7 +38,7 @@ describe("UIStepper (Events)", () => {
         buttonSubtractTestId="test-subtract-button"
         buttonAddTestId="test-add-button"
         txtValueTestId="test-value-text"
-        onValueChange={(newValue: number) => {
+        onValueChanged={(newValue: number) => {
           value = newValue;
         }}
       />
@@ -64,7 +64,7 @@ describe("UIStepper (Events)", () => {
         buttonSubtractTestId="test-subtract-button"
         buttonAddTestId="test-add-button"
         txtValueTestId="test-value-text"
-        onValueChange={(newValue: number) => {
+        onValueChanged={(newValue: number) => {
           value = newValue;
         }}
       />
@@ -90,7 +90,7 @@ describe("UIStepper (Events)", () => {
         buttonSubtractTestId="test-subtract-button"
         buttonAddTestId="test-add-button"
         txtValueTestId="test-value-text"
-        onValueChange={(newValue: number) => {
+        onValueChanged={(newValue: number) => {
           value = newValue;
         }}
       />

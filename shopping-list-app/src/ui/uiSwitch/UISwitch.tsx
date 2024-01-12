@@ -5,7 +5,7 @@ import { useState } from "react";
 interface IProperties {
   value: boolean;
   testId?: string;
-  onValueChange?: (value: boolean) => void;
+  onValueChanged?: (value: boolean) => void;
 }
 
 const UISwitch: React.FC<IProperties> = (props) => {
@@ -20,7 +20,7 @@ const UISwitch: React.FC<IProperties> = (props) => {
   /********************************************/
   /* View Controller
   /********************************************/
-  const { handleOnValueChanged } = useViewController(props.onValueChange);
+  const { handleOnValueChanged } = useViewController(props.onValueChanged);
 
   /********************************************/
   /* Template                                 */

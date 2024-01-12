@@ -14,8 +14,8 @@ describe("UIStepper Events", () => {
     //
 
     // the callback function should be raised when the button is clicked
-    const onValueChange = jest.fn(); // Mock the callback function
-    const { handleOnButtonSubtractEvent } = useViewController(10, onValueChange);
+    const onValueChanged = jest.fn(); // Mock the callback function
+    const { handleOnButtonSubtractEvent } = useViewController(10, onValueChanged);
 
     //
     // Act
@@ -25,7 +25,7 @@ describe("UIStepper Events", () => {
     //
     // Assert
     //
-    expect(onValueChange).toHaveBeenLastCalledWith(9);
+    expect(onValueChanged).toHaveBeenLastCalledWith(9);
   });
 
   test("click '-' when value 0, should not decrement, no value change event", () => {
@@ -34,8 +34,8 @@ describe("UIStepper Events", () => {
     //
 
     // the callback function should be raised when the button is clicked
-    const onValueChange = jest.fn(); // Mock the callback function
-    const { handleOnButtonSubtractEvent } = useViewController(0, onValueChange);
+    const onValueChanged = jest.fn(); // Mock the callback function
+    const { handleOnButtonSubtractEvent } = useViewController(0, onValueChanged);
 
     //
     // Act
@@ -45,7 +45,7 @@ describe("UIStepper Events", () => {
     //
     // Assert
     //
-    expect(onValueChange).toHaveBeenCalledTimes(0);
+    expect(onValueChanged).toHaveBeenCalledTimes(0);
   });
 
   test("click '+' when value 10 which return new value of 11", () => {
@@ -54,8 +54,8 @@ describe("UIStepper Events", () => {
     //
 
     // the callback function should be raised when the button is clicked
-    const onValueChange = jest.fn(); // Mock the callback function
-    const { handleOnButtonIncrementEvent } = useViewController(10, onValueChange);
+    const onValueChanged = jest.fn(); // Mock the callback function
+    const { handleOnButtonIncrementEvent } = useViewController(10, onValueChanged);
 
     //
     // Act
@@ -65,7 +65,7 @@ describe("UIStepper Events", () => {
     //
     // Assert
     //
-    expect(onValueChange).toHaveBeenLastCalledWith(11);
+    expect(onValueChanged).toHaveBeenLastCalledWith(11);
   });
 
   test("edit new value via text field", () => {
@@ -74,8 +74,8 @@ describe("UIStepper Events", () => {
     //
 
     // the callback function should be raised when the button is clicked
-    const onValueChange = jest.fn(); // Mock the callback function
-    const { handleOnValueChanged } = useViewController(10, onValueChange);
+    const onValueChanged = jest.fn(); // Mock the callback function
+    const { handleOnValueChanged } = useViewController(10, onValueChanged);
 
     //
     // Act
@@ -85,6 +85,6 @@ describe("UIStepper Events", () => {
     //
     // Assert
     //
-    expect(onValueChange).toHaveBeenLastCalledWith(123);
+    expect(onValueChanged).toHaveBeenLastCalledWith(123);
   });
 });
