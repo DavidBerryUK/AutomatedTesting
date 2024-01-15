@@ -1,6 +1,4 @@
 import useViewController from "./hooks/UseViewController";
-import { nanoid } from "nanoid";
-import { useState } from "react";
 
 interface IProperties {
   value: boolean;
@@ -9,18 +7,10 @@ interface IProperties {
 }
 
 const UISwitch: React.FC<IProperties> = (props) => {
-  // create unique value for control, this
-  // is used to link the INPUT and LABEL control together
-  //
-  // IDEALLY THIS STATE WOULD BE IN THE VIEW CONTROLLER BUT IT
-  // CAUSED JEST TO FAIL WHEN IMPORTING NANOID
-  //
-  const [controlId] = useState(nanoid());
-
   /********************************************/
   /* View Controller
   /********************************************/
-  const { handleOnValueChanged } = useViewController(props.onValueChanged);
+  const { controlId, handleOnValueChanged } = useViewController(props.onValueChanged);
 
   /********************************************/
   /* Template                                 */

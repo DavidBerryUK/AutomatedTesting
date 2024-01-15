@@ -4,27 +4,6 @@ import useViewController from "../hooks/UseViewController";
 // a click event is fired
 //
 describe("UIButton Events", () => {
-  test("that on click is raised", () => {
-    //
-    // Arrange
-    //
-
-    // the callback function should be raised when the button is clicked
-    const onButtonClicked = jest.fn(); // Mock the callback function
-    const { handleOnClickEvent } = useViewController(onButtonClicked);
-
-    //
-    // Act
-    //
-    // simulate the ui control's click event being called
-    handleOnClickEvent();
-
-    //
-    // Assert
-    //
-    expect(onButtonClicked).toHaveBeenCalled();
-  });
-
   test("on click event with no provided callback", () => {
     //
     // Arrange
@@ -49,5 +28,26 @@ describe("UIButton Events", () => {
 
     // Restore the original console.error function
     console.error = originalError;
+  });
+
+  test("that on click is raised", () => {
+    //
+    // Arrange
+    //
+
+    // the callback function should be raised when the button is clicked
+    const onButtonClicked = jest.fn(); // Mock the callback function
+    const { handleOnClickEvent } = useViewController(onButtonClicked);
+
+    //
+    // Act
+    //
+    // simulate the ui control's click event being called
+    handleOnClickEvent();
+
+    //
+    // Assert
+    //
+    expect(onButtonClicked).toHaveBeenCalled();
   });
 });

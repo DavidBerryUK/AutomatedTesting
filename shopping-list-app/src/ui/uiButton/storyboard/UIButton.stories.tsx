@@ -1,11 +1,11 @@
 import { expect, jest } from "@storybook/jest";
 import { userEvent, within } from "@storybook/testing-library";
+import TestFlexContainer from "src/storybook/testControls/TestFlexContainer";
 import type { Meta, StoryObj } from "@storybook/react";
 import UIButton from "../UIButton";
-import TestFlexContainer from "src/storybook/testControls/TestFlexContainer";
 
 /**
- * Setup Story Documentation
+ * Simple Button control with multiple formatting Options
  */
 const meta = {
   title: "UI/UIButton",

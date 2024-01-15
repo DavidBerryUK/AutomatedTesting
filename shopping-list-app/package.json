@@ -86,6 +86,9 @@
   "jest": {
     "testMatch": [
       "**/jestTests/*.spec.ts"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(nanoid)/)"
     ]
   }
 }

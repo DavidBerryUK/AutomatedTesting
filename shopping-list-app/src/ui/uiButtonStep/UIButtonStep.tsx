@@ -38,7 +38,7 @@ const UIButtonStep: React.FC<IProperties> = (props) => {
   /* Template                                 */
   /********************************************/
   return (
-    <button className={className} type="button" data-testid={props.testId} onClick={handleOnClickEvent}>
+    <button className={className} type="button" onClick={handleOnClickEvent} data-testid={props.testId}>
       {props.label}
     </button>
   );

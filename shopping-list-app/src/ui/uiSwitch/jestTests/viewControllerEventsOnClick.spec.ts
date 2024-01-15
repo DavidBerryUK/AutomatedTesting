@@ -1,4 +1,5 @@
 import useViewController from "../hooks/UseViewController";
+import { renderHook } from "@testing-library/react";
 
 // test the when the switch controll is pressed (toggled)
 //
@@ -10,7 +11,7 @@ describe("UISwitch Events", () => {
 
     // the callback function should be raised when the button is clicked
     const onButtonClicked = jest.fn(); // Mock the callback function
-    const { handleOnValueChanged } = useViewController(onButtonClicked);
+    const { result } = renderHook(() => useViewController((value: boolean) => onButtonClicked(value)));
 
     //
     // Act
@@ -22,8 +23,9 @@ describe("UISwitch Events", () => {
         checked: true,
       },
     } as any;
-    handleOnValueChanged(mockChangeEvent);
 
+    const handleOnValueChanged = result.current.handleOnValueChanged; // Access the function from the result object
+    handleOnValueChanged(mockChangeEvent); // Call the function with the desired value
     //
     // Assert
     //
@@ -37,7 +39,7 @@ describe("UISwitch Events", () => {
 
     // the callback function should be raised when the button is clicked
     const onButtonClicked = jest.fn(); // Mock the callback function
-    const { handleOnValueChanged } = useViewController(onButtonClicked);
+    const { result } = renderHook(() => useViewController((value: boolean) => onButtonClicked(value)));
 
     //
     // Act
@@ -49,8 +51,9 @@ describe("UISwitch Events", () => {
         checked: false,
       },
     } as any;
-    handleOnValueChanged(mockChangeEvent);
 
+    const handleOnValueChanged = result.current.handleOnValueChanged; // Access the function from the result object
+    handleOnValueChanged(mockChangeEvent); // Call the function with the desired value
     //
     // Assert
     //

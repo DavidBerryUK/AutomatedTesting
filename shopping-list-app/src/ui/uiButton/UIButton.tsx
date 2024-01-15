@@ -50,7 +50,7 @@ const UIButton: React.FC<IProperties> = (props) => {
   /* Template                                 */
   /********************************************/
   return (
-    <button className={className} type="button" disabled={props.disabled} data-testid={props.testId} onClick={handleOnClickEvent}>
+    <button className={className} type="button" onClick={handleOnClickEvent} disabled={props.disabled} data-testid={props.testId}>
       {props.label}
     </button>
   );

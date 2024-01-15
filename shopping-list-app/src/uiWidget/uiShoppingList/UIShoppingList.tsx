@@ -1,6 +1,7 @@
 import ShoppingItemModel from "../../models/ShoppingItemModel";
 import UIShoppingItem from "../uiShoppingItem/UIShoppingItem";
 import ShoppingItemCollection from "src/models/ShoppingItemCollection";
+import useViewController from "./hooks/UseViewController";
 
 interface IProperties {
   collection: ShoppingItemCollection;
@@ -12,33 +13,14 @@ interface IProperties {
 
 const UIShoppingList: React.FC<IProperties> = (props) => {
   /********************************************/
-  /* Event Handlers                           */
+  /* View Controller                          */
   /********************************************/
-  const handleShoppingItemChangedEvent = (item: ShoppingItemModel) => {
-    //
-    // raise a item changed event
-    //
-    if (props.onItemChanged) {
-      props.onItemChanged(item);
-    }
-    //
-    // raise a collection changed event
-    //
-    if (props.onCollectionChanged) {
-      const collection = props.collection.clone();
-      collection.updateItem(item);
-      props.onCollectionChanged(collection);
-    }
-  };
-
-  const handleShoppingItemDeletedEvent = (item: ShoppingItemModel) => {
-    //
-    // raise a item deleted
-    //
-    if (props.onItemDeleted) {
-      props.onItemDeleted(item);
-    }
-  };
+  const { handleShoppingItemChangedEvent, handleShoppingItemDeletedEvent } = useViewController(
+    props.collection,
+    props.onCollectionChanged,
+    props.onItemChanged,
+    props.onItemDeleted
+  );
 
   /********************************************/
   /* Template                                 */
